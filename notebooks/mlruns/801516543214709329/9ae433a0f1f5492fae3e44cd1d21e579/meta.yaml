@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/eliecochard/Desktop/XHEC%202/Artefact/xhec-mlops-project-student/xhec-mlops-project-student/notebooks/mlruns/801516543214709329/9ae433a0f1f5492fae3e44cd1d21e579/artifacts
+end_time: 1698053247551
+entry_point_name: ''
+experiment_id: '801516543214709329'
+lifecycle_stage: active
+run_id: 9ae433a0f1f5492fae3e44cd1d21e579
+run_name: shivering-mouse-757
+run_uuid: 9ae433a0f1f5492fae3e44cd1d21e579
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698053247519
+status: 3
+tags: []
+user_id: eliecochard

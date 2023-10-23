@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/eliecochard/Desktop/XHEC%202/Artefact/xhec-mlops-project-student/xhec-mlops-project-student/notebooks/mlruns/801516543214709329/4761b4b11cd34b2297a21761c275b885/artifacts
+end_time: 1698054421009
+entry_point_name: ''
+experiment_id: '801516543214709329'
+lifecycle_stage: active
+run_id: 4761b4b11cd34b2297a21761c275b885
+run_name: bright-gnu-30
+run_uuid: 4761b4b11cd34b2297a21761c275b885
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698054418999
+status: 3
+tags: []
+user_id: eliecochard

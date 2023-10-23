@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/eliecochard/Desktop/XHEC%202/Artefact/xhec-mlops-project-student/xhec-mlops-project-student/notebooks/mlruns/345578719113388534/65e8e570befe4e068e46c6576675df5d/artifacts
+end_time: 1698054631827
+entry_point_name: ''
+experiment_id: '345578719113388534'
+lifecycle_stage: active
+run_id: 65e8e570befe4e068e46c6576675df5d
+run_name: bald-carp-238
+run_uuid: 65e8e570befe4e068e46c6576675df5d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698054629800
+status: 3
+tags: []
+user_id: eliecochard

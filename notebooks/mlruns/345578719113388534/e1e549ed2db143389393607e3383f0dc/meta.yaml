@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/eliecochard/Desktop/XHEC%202/Artefact/xhec-mlops-project-student/xhec-mlops-project-student/notebooks/mlruns/345578719113388534/e1e549ed2db143389393607e3383f0dc/artifacts
+end_time: 1698054522868
+entry_point_name: ''
+experiment_id: '345578719113388534'
+lifecycle_stage: active
+run_id: e1e549ed2db143389393607e3383f0dc
+run_name: bedecked-toad-785
+run_uuid: e1e549ed2db143389393607e3383f0dc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698054520937
+status: 3
+tags: []
+user_id: eliecochard

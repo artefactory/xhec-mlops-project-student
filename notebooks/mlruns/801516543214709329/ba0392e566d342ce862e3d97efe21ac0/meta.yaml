@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/eliecochard/Desktop/XHEC%202/Artefact/xhec-mlops-project-student/xhec-mlops-project-student/notebooks/mlruns/801516543214709329/ba0392e566d342ce862e3d97efe21ac0/artifacts
+end_time: 1698053550934
+entry_point_name: ''
+experiment_id: '801516543214709329'
+lifecycle_stage: active
+run_id: ba0392e566d342ce862e3d97efe21ac0
+run_name: upbeat-cod-159
+run_uuid: ba0392e566d342ce862e3d97efe21ac0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698053548746
+status: 3
+tags: []
+user_id: eliecochard

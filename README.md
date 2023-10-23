@@ -46,7 +46,7 @@ The industrialization takes the form of an API (which runs locally) that can be 
 
 The work will be noted on the following criteria:
 
-- **Clarity** and quality of code 
+- **Clarity** and quality of code
   - good module structure
   - naming conventions
   - (bonus) docstrings, formatting, type hints
@@ -65,7 +65,7 @@ The work will be noted on the following criteria:
 
 ## Steps to reproduce to build the deliverable
 
-To help you with the structure and order of steps to perform in this project, we have created different templates for pull requests. 
+To help you with the structure and order of steps to perform in this project, we have created different templates for pull requests.
 Each branch in this repository corresponds to a future pull request and has an attached markdown file with the instructions to perform the tasks of the pull request.
 Each branch starts with a number.
 You can follow the order of the branches to build your project and collaborate.

@@ -1,14 +1,15 @@
 import os
 import pickle
 from functools import lru_cache
+from typing import Any
 
 from loguru import logger
 
+
 # Function to load a preprocessor object from a file
 @lru_cache
-def load_preprocessor(filepath: os.PathLike):
-    """
-    Load a preprocessor object from a file.
+def load_preprocessor(filepath: os.PathLike) -> Any:
+    """Load a preprocessor object from a file.
 
     Args:
         filepath (os.PathLike): The path to the file containing the preprocessor object.
@@ -23,11 +24,11 @@ def load_preprocessor(filepath: os.PathLike):
     with open(filepath, "rb") as f:
         return pickle.load(f)
 
+
 # Function to load a machine learning model from a file
 @lru_cache
-def load_model(filepath: os.PathLike):
-    """
-    Load a machine learning model from a file.
+def load_model(filepath: os.PathLike) -> Any:
+    """Load a machine learning model from a file.
 
     Args:
         filepath (os.PathLike): The path to the file containing the machine learning model.

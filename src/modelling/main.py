@@ -9,7 +9,7 @@ from training import train_model
 from utils import load_pickle, save_pickle
 
 
-def main(trainset_path: str, select_train=True) -> None:
+def main(trainset_path, select_train=True) -> None:
     """Train a model using the data at the given path and save the model (pickle)."""
     # Read data
     df = pd.read_csv(trainset_path)

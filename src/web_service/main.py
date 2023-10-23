@@ -13,7 +13,6 @@ from utils import load_objects, load_preprocessor
 
 app = FastAPI(title=APP_TITLE, description=APP_DESCRIPTION, version=APP_VERSION)
 
-
 @app.get("/")
 def home():
     return {"health_check": "App up and running!"}

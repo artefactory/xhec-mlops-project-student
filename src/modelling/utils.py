@@ -7,7 +7,7 @@ from typing import Any
 import numpy as np
 from sklearn.metrics import mean_squared_error
 
-CATEGORICAL_COLS = ["Sexe"]
+CATEGORICAL_COLS = ["Sex"]
 DROP_COLS = ["Age", "Rings"]
 
 

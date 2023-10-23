@@ -133,3 +133,5 @@ dmypy.json
 # Secret files
 secrets/*
 !secrets/.gitkeep
+.DS_Store
+*.csv

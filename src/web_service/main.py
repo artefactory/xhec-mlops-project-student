@@ -11,7 +11,7 @@ app = FastAPI(title=APP_TITLE, description=APP_DESCRIPTION, version=APP_VERSION)
 
 # Define a route for the root endpoint
 @app.get("/")
-def home():
+def home() -> dict:
     return {"health_check": "App up and running!"}
 
 

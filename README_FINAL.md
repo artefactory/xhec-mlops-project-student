@@ -70,30 +70,23 @@ git clone https://github.com/ConstanceGlly/xhec-mlops-project-student.git
 cd abalone-age-prediction
 ```
 
-1. Create a Conda environment using the provided environment.yml file:
+2. Create a Conda environment using the provided environment.yml file:
 ```bash
 conda env create -f environment.yml
 conda activate abalone-prediction-env
 ```
 
-2. Compile the requiremnts and install them:
-```bash
-pip-compile requirements.in
-pip istall -r requirements.txt
-```
-
-
-1. Build the Docker image:
+3. Build the Docker image:
 ```bash
 docker build -t abalone-prediction .
 ```
 
-1. Run the Docker container:
+4. Run the Docker container:
 ```bash
-docker run -p 5000:5000 abalone-prediction
+docker run -p 8001:8001 abalone-prediction
 ```
 
-The project should now be running locally, and you can access it at `http://localhost:5000`.
+The project should now be running locally, and you can access it at `http://localhost:8001`.
 
 ## Contributing
 
@@ -112,3 +105,12 @@ This project is licensed under the MIT License - see the [LICENSE](MIT-LICENSE.t
 ## Acknowledgments
 
 - Kaggle for providing the Abalone dataset.
+
+## Participants
+
+Constance Guelluy - ConstanceGlly
+Quentin Stroobants - quentinstroobants
+Nathan Rozot - rozmax
+Cedomir Ljubic - Cedotorpedo
+Elie Cochard - Cochmix22
+Diane Paul - dianepaul

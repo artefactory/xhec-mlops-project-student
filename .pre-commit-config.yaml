@@ -25,6 +25,7 @@ repos:
         entry: ruff
         types: [python]
         language: system
+        args: [--fix]
       - id: nbstripout
         name: Strip Jupyter notebook output (nbstripout)
         entry: nbstripout

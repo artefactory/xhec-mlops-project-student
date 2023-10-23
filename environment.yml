@@ -1,4 +1,4 @@
-name: x-hec-solution
+name: abalone-prediction-env
 channels:
   - conda-forge
 dependencies:

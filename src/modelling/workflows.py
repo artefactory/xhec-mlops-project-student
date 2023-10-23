@@ -4,7 +4,7 @@ from typing import Optional
 import numpy as np
 from loguru import logger
 from modeling import evaluate_model, predict, train_model
-from prefect import flow
+from prefect import flow, task
 from preprocessing import process_data
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
@@ -63,8 +63,6 @@ if __name__ == "__main__":
     )
 
     # print("batch_predict_workflow")
-    for i in range(100):
-        print(i)
     batch_predict_workflow(
         input_filepath=os.path.join(DATA_DIRPATH, "abalone.csv"),
         artifacts_filepath=MODELS_DIRPATH,

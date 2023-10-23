@@ -34,6 +34,11 @@ select = [
   "PD",
 ] # See: https://beta.ruff.rs/docs/rules/
 ignore = [
+  "PTH120",
+  "PTH100",
+  "ANN001",
+  "ANN401",
+  "PTH118",
   "D100",
   "D101",
   "D103",

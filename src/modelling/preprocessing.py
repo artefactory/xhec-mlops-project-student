@@ -19,13 +19,7 @@ def encode_categorical_cols(df: pd.DataFrame, categorical_cols: List[str] = None
     # Encode categorical columns
     if categorical_cols is None:
         categorical_cols = CATEGORICAL_COLS
-
-    # print("here")
-    # print(df.columns)
-    # print(CATEGORICAL_COLS)
     df = pd.get_dummies(df, columns=categorical_cols, drop_first=True)
-    # print(df.columns)
-    # print(df)
 
     return df
 
@@ -49,9 +43,8 @@ def extract_x_y(df: pd.DataFrame, no_target: bool = False) -> dict:
 
 
 @flow(name="Preprocess data")
-def process_data(filepath: str, for_training: bool) -> Tuple(pd.DataFrame):
+def process_data(filepath: str, for_training: bool) -> Tuple[pd.DataFrame]:
     df = pd.read_csv(filepath)
-
     if for_training:
         logger.debug(f"{filepath} | Computing target...")
         df1 = compute_target(df)
@@ -68,5 +61,4 @@ def process_data(filepath: str, for_training: bool) -> Tuple(pd.DataFrame):
         df2 = scale(df1)
         logger.debug(f"{filepath} | Extracting X and y...")
         X, y = extract_x_y(df2, no_target=True)
-
     return X, y

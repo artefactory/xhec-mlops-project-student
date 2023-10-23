@@ -76,13 +76,20 @@ conda env create -f environment.yml
 conda activate abalone-prediction-env
 ```
 
+3. Install the requirements:
+```bash
+  # Compile requirements.in to requirements.txt
+  pip-compile --output-file=requirements.txt requirements.in
+  # Install dependencies from requirements.txt
+  pip install -r requirements.txt
+```
 
-3. Build the Docker image:
+1. Build the Docker image:
 ```bash
 docker build -t abalone-prediction .
 ```
 
-4. Run the Docker container:
+1. Run the Docker container:
 ```bash
 docker run -p 8001:8001 abalone-prediction
 ```

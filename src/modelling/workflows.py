@@ -58,6 +58,8 @@ if __name__ == "__main__":
         artifacts_filepath=MODELS_DIRPATH,
     )
     batch_predict_workflow(
-        input_filepath=os.path.join(DATA_DIRPATH, "abalone.csv"),
+        input_filepath=os.path.join(
+            DATA_DIRPATH, "abalone.csv"
+        ),  # in reality another file would be used here
         artifacts_filepath=MODELS_DIRPATH,
     )

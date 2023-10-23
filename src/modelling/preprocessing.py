@@ -49,7 +49,7 @@ def extract_x_y(df: pd.DataFrame, no_target: bool = False) -> dict:
 
 
 @flow(name="Preprocess data")
-def process_data(filepath: str, for_training: bool) -> Tuple(pd.DataFrame):
+def process_data(filepath: str, for_training: bool) -> Tuple[pd.DataFrame]:
     df = pd.read_csv(filepath)
 
     if for_training:

@@ -33,7 +33,7 @@ def train_model_workflow(
         logger.info(f"Saving artifacts to {artifacts_filepath}...")
         save_pickle(os.path.join(artifacts_filepath, "model.pkl"), model)
 
-    # return {"model": model, "rmse": rmse}
+    return {"model": model, "rmse": rmse}
 
 
 @flow(name="Batch predict")
@@ -53,12 +53,10 @@ def batch_predict_workflow(
 if __name__ == "__main__":
     from config import DATA_DIRPATH, MODELS_DIRPATH
 
-    print("train_model_workflow")
     train_model_workflow(
         data_filepath=os.path.join(DATA_DIRPATH, "abalone.csv"),
         artifacts_filepath=MODELS_DIRPATH,
     )
-    print("batch_predict_workflow")
     batch_predict_workflow(
         input_filepath=os.path.join(DATA_DIRPATH, "abalone.csv"),
         artifacts_filepath=MODELS_DIRPATH,

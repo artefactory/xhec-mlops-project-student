@@ -30,8 +30,8 @@ You can download the dataset on the [Kaggle page](https://www.kaggle.com/dataset
   - [Table of Contents](#table-of-contents)
   - [Deliverables and notation](#deliverables-and-notation)
     - [Deliverables](#deliverables)
-    - [Notation](#notation)
-  - [Steps to reproduce to build the deliverable](#steps-to-reproduce-to-build-the-deliverable)
+    - [Evaluation](#evaluation)
+  - [Necessary steps to reproduce to build the deliverable](#necessary-steps-to-reproduce-to-build-the-deliverable)
     - [Pull requests in this project](#pull-requests-in-this-project)
     - [Tips to work on this project](#tips-to-work-on-this-project)
 
@@ -123,7 +123,6 @@ It should rather look like this:
 pip install pre-commit
 pre-commit install
 ```
-
 This will guarantee that your code is formatted correctly and of good quality before each commit.
 
 - Use a `requirements.in` file to list the dependencies of your project. You can use the following command to generate a `requirements.txt` file from a `requirements.in` file:

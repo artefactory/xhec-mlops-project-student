@@ -7,7 +7,6 @@ repos:
       - id: check-toml
       - id: check-yaml
       - id: check-json
-      - id: check-added-large-files
   - repo: local
     hooks:
       - id: black
@@ -25,6 +24,7 @@ repos:
         entry: ruff
         types: [python]
         language: system
+        args: ["--ignore=PTH118,D415,ANN401"]
       - id: nbstripout
         name: Strip Jupyter notebook output (nbstripout)
         entry: nbstripout

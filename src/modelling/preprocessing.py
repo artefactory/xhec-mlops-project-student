@@ -39,7 +39,7 @@ def scale(X: pd.DataFrame) -> pd.DataFrame:
 
 
 @task
-def extract_x_y(df: pd.DataFrame, no_target: False) -> dict:
+def extract_x_y(df: pd.DataFrame, no_target=False) -> dict:
     # Extract X and y
     if no_target == True:
         X, y = df.drop(DROP_COLS, axis=1), None

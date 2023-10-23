@@ -53,11 +53,12 @@ def batch_predict_workflow(
 if __name__ == "__main__":
     from config import DATA_DIRPATH, MODELS_DIRPATH
 
-    # train_model_workflow(
-    #     data_filepath=os.path.join(DATA_DIRPATH, "abalone.csv"),
-    #     artifacts_filepath=MODELS_DIRPATH,
-    # )
-    # print("batch_predict_workflow")
+    print("train_model_workflow")
+    train_model_workflow(
+        data_filepath=os.path.join(DATA_DIRPATH, "abalone.csv"),
+        artifacts_filepath=MODELS_DIRPATH,
+    )
+    print("batch_predict_workflow")
     batch_predict_workflow(
         input_filepath=os.path.join(DATA_DIRPATH, "abalone.csv"),
         artifacts_filepath=MODELS_DIRPATH,

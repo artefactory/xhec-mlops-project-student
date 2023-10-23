@@ -20,12 +20,6 @@ repos:
         entry: isort
         types: [python]
         language: system
-      - id: ruff
-        name: Linting (ruff)
-        entry: ruff
-        types: [python]
-        language: system
-        args: [--fix]
       - id: nbstripout
         name: Strip Jupyter notebook output (nbstripout)
         entry: nbstripout

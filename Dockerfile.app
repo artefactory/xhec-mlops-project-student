@@ -3,7 +3,7 @@ WORKDIR /app_home
 COPY ./requirements_app.txt /app_home/requirements_app.txt
 RUN pip install --upgrade pip \
     && pip install --no-cache-dir -r /app_home/requirements_app.txt
-COPY ./web_service /app_home/web_service
+COPY ./src/web_service /app_home/web_service
 WORKDIR /app_home/web_service
 
 EXPOSE 8001

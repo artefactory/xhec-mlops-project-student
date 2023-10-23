@@ -84,12 +84,24 @@ conda activate abalone-prediction-env
   pip install -r requirements.txt
 ```
 
-1. Build the Docker image:
+4. Launch prefect (in another terminal):
+```bash
+  conda activate abalone-prediction-env
+  prefect server start --host 0.0.0.0
+```
+
+5. Train the model:
+```bash
+  cd src/modelling
+  python workflows.py
+```
+
+6. Build the Docker image:
 ```bash
 docker build -t abalone-prediction .
 ```
 
-1. Run the Docker container:
+7. Run the Docker container:
 ```bash
 docker run -p 8001:8001 abalone-prediction
 ```

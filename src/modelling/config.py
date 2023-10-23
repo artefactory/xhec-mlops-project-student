@@ -1,7 +1,7 @@
 from pathlib import Path
 
 CATEGORICAL_COLS = ["Sex"]
-DROP_COLS = ["Age", "Rings"]
+DROP_COLS = ["Rings"]
 
 
 # [3] means go up 3 levels from the current file -> from ./lessons/03/solution/config.py to ./

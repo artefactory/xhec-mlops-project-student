@@ -39,9 +39,12 @@ def scale(X: pd.DataFrame) -> pd.DataFrame:
 
 
 @task
-def extract_x_y(df: pd.DataFrame) -> dict:
+def extract_x_y(df: pd.DataFrame, no_target: False) -> dict:
     # Extract X and y
-    X, y = df.drop(DROP_COLS, axis=1), df["Age"]
+    if no_target == True:
+        X, y = df.drop(DROP_COLS, axis=1), None
+    else:
+        X, y = df.drop(DROP_COLS, axis=1).drop(["Age"], axis=1), df["Age"]
     return X, y
 
 
@@ -54,20 +57,16 @@ def process_data(filepath: str, for_training: bool):
         df1 = compute_target(df)
         logger.debug(f"{filepath} | Encoding categorical columns...")
         df2 = encode_categorical_cols(df1)
-        print("df.columns")
-        print(df2.columns)
         logger.debug(f"{filepath} | Scaling the features...")
         df3 = scale(df2)
-        print("df3")
-        print(df3.columns)
-        logger.debug(f"{filepath} | Extracting X and y and splitting in train and test...")
+        logger.debug(f"{filepath} | Extracting X and y...")
         X, y = extract_x_y(df3)
     else:
         logger.debug(f"{filepath} | Encoding categorical columns...")
         df1 = encode_categorical_cols(df)
         logger.debug(f"{filepath} | Scaling the features...")
         df2 = scale(df1)
-        logger.debug(f"{filepath} | Extracting X and y and splitting in train and test...")
-        X, y = extract_x_y(df2)
+        logger.debug(f"{filepath} | Extracting X and y...")
+        X, y = extract_x_y(df2, no_target=True)
 
     return X, y

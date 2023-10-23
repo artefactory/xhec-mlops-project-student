@@ -45,23 +45,18 @@ def batch_predict_workflow(
     """Make predictions on a new dataset"""
     if model is None:
         model = load_pickle(os.path.join(artifacts_filepath, "model.pkl"))
-    # print("here2")
-    X, _ = process_data(filepath=input_filepath, with_target=False)
-    # print("here3")
+    X, _ = process_data(filepath=input_filepath, for_training=False)
     y_pred = predict(X, model)
-    # print("here4")
     return y_pred
 
 
 if __name__ == "__main__":
     from config import DATA_DIRPATH, MODELS_DIRPATH
 
-    # print("train_model_workflow")
-    train_model_workflow(
-        data_filepath=os.path.join(DATA_DIRPATH, "abalone.csv"),
-        artifacts_filepath=MODELS_DIRPATH,
-    )
-
+    # train_model_workflow(
+    #     data_filepath=os.path.join(DATA_DIRPATH, "abalone.csv"),
+    #     artifacts_filepath=MODELS_DIRPATH,
+    # )
     # print("batch_predict_workflow")
     batch_predict_workflow(
         input_filepath=os.path.join(DATA_DIRPATH, "abalone.csv"),

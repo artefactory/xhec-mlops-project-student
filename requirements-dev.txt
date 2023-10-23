@@ -1,4 +1,4 @@
--r requirements.in
+-r requirements.txt
 -e .
 pip-tools==7.3.0
 black==22.10.0

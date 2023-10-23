@@ -69,11 +69,19 @@ Follow these instructions to get a copy of the project up and running on your lo
 git clone https://github.com/ConstanceGlly/xhec-mlops-project-student.git
 cd abalone-age-prediction
 ```
-2. Build the Docker image:
+
+2. Create a Conda environment using the provided environment.yml file and activate it:
+```bash
+conda env create -f environment.yml
+conda activate abalone-prediction-env
+```
+
+3. Build the Docker image:
 ```bash
 docker build -t abalone-prediction .
 ```
-3. Run the Docker container:
+
+4. Run the Docker container:
 ```bash
 docker run -p 5000:5000 abalone-prediction
 ```

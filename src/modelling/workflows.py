@@ -4,7 +4,7 @@ from typing import Optional
 import numpy as np
 from loguru import logger
 from modeling import evaluate_model, predict, train_model
-from prefect import flow, task
+from prefect import flow
 from preprocessing import process_data
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split

@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Tuple
 
 import pandas as pd
 from config import CATEGORICAL_COLS, DROP_COLS
@@ -39,9 +39,9 @@ def scale(X: pd.DataFrame) -> pd.DataFrame:
 
 
 @task
-def extract_x_y(df: pd.DataFrame, no_target=False) -> dict:
+def extract_x_y(df: pd.DataFrame, no_target: bool = False) -> dict:
     # Extract X and y
-    if no_target == True:
+    if no_target is True:
         X, y = df.drop(DROP_COLS, axis=1), None
     else:
         X, y = df.drop(DROP_COLS, axis=1).drop(["Age"], axis=1), df["Age"]
@@ -49,7 +49,7 @@ def extract_x_y(df: pd.DataFrame, no_target=False) -> dict:
 
 
 @flow(name="Preprocess data")
-def process_data(filepath: str, for_training: bool):
+def process_data(filepath: str, for_training: bool) -> Tuple(pd.DataFrame):
     df = pd.read_csv(filepath)
 
     if for_training:

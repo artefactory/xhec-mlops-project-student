@@ -11,8 +11,7 @@ if __name__ == "__main__":
         tags=["training", "model"],
         cron="0 0 * * 0",
         parameters={
-            "train_filepath": os.path.join(DATA_DIRPATH, "yellow_tripdata_2021-01.parquet"),
-            "test_filepath": os.path.join(DATA_DIRPATH, "yellow_tripdata_2021-02.parquet"),
+            "train_filepath": os.path.join(DATA_DIRPATH, "abalone.csv"),
             "artifacts_filepath": MODELS_DIRPATH,
         },
     )
@@ -23,7 +22,7 @@ if __name__ == "__main__":
         tags=["inference"],
         interval=600,
         parameters={
-            "input_filepath": os.path.join(DATA_DIRPATH, "yellow_tripdata_2021-03.parquet"),
+            "input_filepath": os.path.join(DATA_DIRPATH, "abalone.csv"),
             "artifacts_filepath": MODELS_DIRPATH,
         },
     )

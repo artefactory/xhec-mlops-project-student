@@ -136,3 +136,6 @@ secrets/*
 
 # MLflow Artifacts
 mlruns/
+
+# Don't save Catboost info 
+.notebooks/catboost_info

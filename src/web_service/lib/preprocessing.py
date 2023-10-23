@@ -1,11 +1,11 @@
 from typing import List
 
 import pandas as pd
-from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-DROP_COLS = ["Rings","Age"]
+DROP_COLS = ["Rings", "Age"]
 CATEGORICAL_COLS = ["Sex"]
+
 
 def encode_categorical_cols(df: pd.DataFrame, categorical_cols: List[str] = None) -> pd.DataFrame:
     # Encode categorical columns

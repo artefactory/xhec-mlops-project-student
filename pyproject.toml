@@ -16,7 +16,7 @@ requires-python = ">=3.9"
 "Homepage" = "https://github.com/artefactory/xhec-mlops-project-student" # TODO: update this URL
 
 [tool.setuptools]
-packages = ["src", "config"]
+packages = ["src"]
 
 [tool.ruff]
 select = [
@@ -34,6 +34,11 @@ select = [
   "PD",
 ] # See: https://beta.ruff.rs/docs/rules/
 ignore = [
+  "PTH120",
+  "PTH100",
+  "ANN001",
+  "ANN401",
+  "PTH118",
   "D100",
   "D101",
   "D103",

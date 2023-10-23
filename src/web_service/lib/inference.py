@@ -19,9 +19,9 @@ def run_inference(input_data: List[InputData], model: BaseEstimator) -> np.ndarr
         np.ndarray: Predicted abalone ages in years.
 
     Example InputData:
-        [InputData(Sex='M', Length=0.388, 
-        Diameter=0.215, Height=0.085, 
-        Whole_weight=0.4990, Shucked_weight=0.2745, 
+        [InputData(Sex='M', Length=0.388,
+        Diameter=0.215, Height=0.085,
+        Whole_weight=0.4990, Shucked_weight=0.2745,
         Viscera_weight=0.1330, Shell_weight=0.180)]
     """
     # Log that the inference is being run
@@ -39,7 +39,7 @@ def run_inference(input_data: List[InputData], model: BaseEstimator) -> np.ndarr
     )
 
     # Encode the 'Sex' column as binary columns 'Sex_I' and 'Sex_M'
-    # Note : 
+    # Note :
     # we did not use the regular get_dummies or label encoder because
     # it would not create two but one column in a 1 row df as the input
     df["Sex_I"] = df["Sex"].apply(lambda x: True if x == "I" else False)

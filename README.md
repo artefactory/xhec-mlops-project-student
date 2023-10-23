@@ -46,7 +46,7 @@ The industrialization takes the form of an API (which runs locally) that can be 
 
 The work will be noted on the following criteria:
 
-- **Clarity** and quality of code 
+- **Clarity** and quality of code
   - good module structure
   - naming conventions
   - (bonus) docstrings, formatting, type hints
@@ -65,7 +65,7 @@ The work will be noted on the following criteria:
 
 ## Steps to reproduce to build the deliverable
 
-To help you with the structure and order of steps to perform in this project, we have created different templates for pull requests. 
+To help you with the structure and order of steps to perform in this project, we have created different templates for pull requests.
 Each branch in this repository corresponds to a future pull request and has an attached markdown file with the instructions to perform the tasks of the pull request.
 Each branch starts with a number.
 You can follow the order of the branches to build your project and collaborate.
@@ -97,12 +97,10 @@ Github [Pull Requests](https://docs.github.com/articles/about-pull-requests) are
 - Use a virtual environment to install the dependencies of the project (conda or virtualenv for instance)
 
 - Once your virtual environment is activated, install the pre-commit hooks to automatically format your code before each commit:
-
 ```bash
 pip install pre-commit
 pre-commit install
 ```
-
 This will guarantee that your code is formatted correctly and of good quality before each commit.
 
 - Use a `requirements.in` file to list the dependencies of your project. You can use the following command to generate a `requirements.txt` file from a `requirements.in` file:

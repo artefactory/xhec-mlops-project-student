@@ -25,7 +25,7 @@ repos:
         entry: ruff
         types: [python]
         language: system
-        args: ["--ignore", "PTH118"]
+        args: ["--ignore", "PTH118", "D415"]
       - id: nbstripout
         name: Strip Jupyter notebook output (nbstripout)
         entry: nbstripout

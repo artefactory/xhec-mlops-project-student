@@ -10,19 +10,18 @@ from lib.models import InputData
 from lib.preprocessing import CATEGORICAL_COLS, encode_categorical_cols, scale
 
 
-def run_inference(input_data: List[InputData], dv: DictVectorizer, model: BaseEstimator) -> np.ndarray:
+def run_inference(input_data: List[InputData], model: BaseEstimator) -> np.ndarray:
     """Run inference on a list of input data.
 
     Args:
         payload (dict): the data point to run inference on.
-        dv (DictVectorizer): the fitted DictVectorizer object.
         model (BaseEstimator): the fitted model object.
 
     Returns:
         np.ndarray: the predicted abalone age in years.
 
-    Example payload:
-
+    Example Abalone_data:
+        {'Sex':M,	'Length':0.388,	'Diameter':0.215,	'Height':0.085,	'Whole weight':0.4990,	'Shucked weight':0.2745,	'Viscera weight':0.1330,	'Shell weight':0.180}
     """
     logger.info(f"Running inference on:\n{input_data}")
     df = pd.DataFrame([x.dict() for x in input_data])
@@ -31,9 +30,7 @@ def run_inference(input_data: List[InputData], dv: DictVectorizer, model: BaseEs
                             "Viscera_weight" : "Viscera weight",
                             "Shell_weight" : "Shell weight"})
     df = encode_categorical_cols(df, CATEGORICAL_COLS)
-    df = scale(df)
-    dicts = df.to_dict(orient="records")
-    X = dv.transform(dicts)
+    X = scale(df)
     y = model.predict(X)
     logger.info(f"Predicted abalone ages:\n{y}")
     return y

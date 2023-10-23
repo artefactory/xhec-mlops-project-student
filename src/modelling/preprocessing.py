@@ -21,10 +21,12 @@ def encode_categorical_cols(df: pd.DataFrame, categorical_cols: List[str] = None
     df = pd.get_dummies(df, columns=categorical_cols, drop_first=True)
     return df
 
+
 def scale(X: pd.DataFrame) -> pd.DataFrame:
     # StandardScaler
     X_scaled = StandardScaler().fit_transform(X)
     return X_scaled
+
 
 def extract_x_y(df: pd.DataFrame) -> dict:
     # Extract X and y

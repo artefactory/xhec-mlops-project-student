@@ -65,7 +65,7 @@ Your work will be graded based on the following criteria:
   - The workflows to train the model and to make the inference (prediction of the age of abalone) are in separate modules and use Prefect `flow` and `task` objects
 - Use of *Pull Requests* (see below) to coordinate your collaboration 
 
-## Steps to reproduce to build the deliverable
+## Necessary steps to reproduce to build the deliverable
 
 To help you with the structure and order of steps to perform in this project, we created different pull requests templates. 
 Each branch in this repository corresponds to a future pull request and has an attached markdown file with the instructions to perform the tasks of the pull request.
